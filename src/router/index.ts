@@ -5,18 +5,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'splash',
-      component: () => import('@/views/Splash.vue'),
-    },
-    {
-      path: '/onboarding-1',
-      name: 'onboarding-1',
-      component: () => import('@/views/OnBoardingOne.vue'),
-    },
-    {
-      path: '/onboarding-2',
-      name: 'onboarding-2',
-      component: () => import('@/views/OnBoardingTwo.vue'),
+      name: 'onboarding',
+      component: () => import('@/views/OnBoarding.vue'),
     },
     {
       path: '/favorites',
