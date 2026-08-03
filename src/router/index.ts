@@ -23,7 +23,7 @@ const router = createRouter({
       name: 'favorites',
       component: () => import('@/views/Favorites.vue'),
     },
-    {w
+    {
       path: '/regions',
       name: 'regions',
       component: () => import('@/views/Regions.vue'),
