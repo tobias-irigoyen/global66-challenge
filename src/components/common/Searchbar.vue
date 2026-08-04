@@ -4,7 +4,7 @@
     class="searchbar flex items-center flex-wrap gap-4 !mb-4"
   >
     <div class="relative">
-      <SearchLens class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
+      <SearchIcon class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
 
       <input
         v-model="search"

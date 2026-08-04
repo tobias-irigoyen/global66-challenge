@@ -1,7 +1,7 @@
 <template>
   <Loading v-if="pokemonStore.loading" />
 
-  <Error
+  <Messagge
     v-else-if="pokemonStore.error"
     :image="'/src/assets/commons/magikarp.svg'"
     :title="'Algo salió mal...'"
@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import Loading from '../components/common/Loading.vue';
-import Error from '../components/common/Error.vue';
+import Messagge from '../components/common/Message.vue';
 import Searchbar from '../components/common/Searchbar.vue';
 
 import { onMounted, computed, ref } from 'vue'
