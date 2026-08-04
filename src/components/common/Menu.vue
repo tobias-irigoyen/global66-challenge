@@ -1,5 +1,5 @@
 <template>
-    <aside class="fixed bottom-0 left-0 w-full rounded-xl border-gray-300 border-t-2 pt-4 py-2 px-[1rem]">
+    <aside class="fixed bottom-0 left-0 w-full rounded-xl border-gray-300 border-t-2 pt-4 py-2 px-[1rem] bg-white z-30">
         <ul class="flex justify-between items-center gap-4 md:justify-center md:gap-12">
             <li>
                 <RouterLink to="/pokemons" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer">

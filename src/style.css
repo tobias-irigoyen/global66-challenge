@@ -23,9 +23,31 @@
   --ice-type: #3d8bff;
   --flying-type: #00bcd4;
   --poison-type: #9c27b0;
+  --grass-type: #8bc34a;
+
+
   --light-orange: rgba(255, 152, 0, 0.5);
   --light-green: rgba(139, 195, 74, 0.5);
-  --grass-type: #8bc34a;
+  --light-red: rgba(244, 67, 54, 0.5);
+  --light-blue: rgba(33, 150, 243, 0.5);
+  --light-purple: rgba(156, 39, 176, 0.5);
+  --light-cyan: rgba(0, 188, 212, 0.5);
+  --light-pink: rgba(233, 30, 99, 0.5);
+  --light-yellow: rgba(255, 235, 59, 0.5);
+  --light-brown: rgba(121, 85, 72, 0.5);
+  --light-gray: rgba(158, 158, 158, 0.5);
+  --light-black: rgba(0, 0, 0, 0.5);
+  --light-white: rgba(255, 255, 255, 0.5);
+  --light-sky: rgb(161, 206, 243);
+  --light-lime: #b3f06c;
+  --light-indigo: #8fa8f4;
+  --light-steel: rgba(158, 158, 158, 0.897);
+  --light-rose: rgb(247, 137, 173);
+  --dark-rose: rgb(190, 101, 131);
+  --dark-yellow: rgb(182, 166, 26);
+  --dark-indigo: #9473b4;
+  --dark-purple: #4b3363;
+
   --female-genre: #ff7596;
   --male-genre: #2551c3;
 
@@ -43,8 +65,13 @@ body {
   font-family: var(--poppins);
   color: var(--primary-text);
   padding-top: 2.25rem;
+  padding-bottom: 128px;
   padding-left: 1rem;
   padding-right: 1rem;
+  @media all and (min-width: 769px) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 .menu-link span {
@@ -60,4 +87,23 @@ body {
 .menu-link.router-link-active {
   color: var(--menu-active-link) !important;
   font-weight: 600;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 800ms infinite;
 }
