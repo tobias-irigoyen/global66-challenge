@@ -26,6 +26,7 @@
     </p>
 
     <button
+      v-if="hasButton"
       class="font-semibold bg-[var(--primary-btn)] hover:bg-[var(--checked-btn)] cursor-pointer w-full text-white py-4 rounded-full max-w-[620px] transition-colors"
       @click="emit('action')"
     >
@@ -43,7 +44,8 @@ defineProps<{
   image: string
   title: string
   description: string
-  buttonText: string
+  hasButton: boolean
+  buttonText?: string
 }>()
 
 const emit = defineEmits<{

@@ -3,10 +3,11 @@
 
   <Error
     v-else-if="pokemonStore.error"
-    image="/src/assets/commons/magikarp.svg"
-    title="Algo salió mal..."
+    :image="'/src/assets/commons/magikarp.svg'"
+    :title="'Algo salió mal...'"
     :description="pokemonStore.error"
-    buttonText="Reintentar"
+    :hasButton="true"
+    :buttonText="'Reintentar'"
     @action="pokemonStore.fetchPokemons"
   />
 
