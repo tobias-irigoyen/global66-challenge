@@ -19,7 +19,7 @@
       title="Mantén tu Pokédex actualizada"
       description="Regístrate y guarda tu perfil, Pokémon favoritos, configuraciones y mucho más en la aplicación"
       button-text="Empecemos"
-      @action="() => {}"
+      @action="goToPokedex()"
     />
   </section>
 </template>
@@ -27,6 +27,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import OnboardingStep from '@/components/onboarding/OnboardingStep.vue' 
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const currentStep = ref(1)
+const goToPokedex = () => {
+  router.push('/pokemons')
+}
 </script>
