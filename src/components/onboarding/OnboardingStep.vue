@@ -12,7 +12,7 @@
       :alt="title"
       @load="loadedImage = true"
       class="mx-auto mb-8 h-full"
-      :class="['w-full h-full object-contain transition-opacity duration-300', loaded ? 'opacity-100' : 'opacity-0'
+      :class="['w-full h-full object-contain transition-opacity duration-300', loadedImage ? 'opacity-100' : 'opacity-0'
       ]"
     />
   </div>
