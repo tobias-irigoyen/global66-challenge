@@ -1,10 +1,22 @@
 <template>
   <article class="flex flex-col justify-end items-center">
-    <img
+
+  <div class="mb-8 h-[270px] w-[270px]">
+    <div
+      v-if="!loadedImage"
+      class="w-full h-full animate-pulse bg-gray-300 rounded-xl"
+    />
+    
+    <img 
       :src="image"
       :alt="title"
-      class="mx-auto mb-8 h-[270px]"
+      @load="loadedImage = true"
+      class="mx-auto mb-8 h-full"
+      :class="['w-full h-full object-contain transition-opacity duration-300', loaded ? 'opacity-100' : 'opacity-0'
+      ]"
     />
+  </div>
+    
 
     <h1 class="text-[1.625rem] font-medium text-center mb-4">
       {{ title }}
@@ -30,7 +42,9 @@
 
 <script setup lang="ts">
 import OnboardingStepper from './OnboardingStepper.vue'
+import { ref } from 'vue'
 
+const loadedImage = ref(false)
 const currentStep = defineModel<number>()
 
 defineProps<{
