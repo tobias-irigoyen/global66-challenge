@@ -3,7 +3,7 @@
     <OnboardingStep
       v-if="currentStep === 1"
       v-model="currentStep"
-      image="/src/assets/onboard/fisher.png"
+      image="/src/assets/onboard/fisher.svg"
       alt="pokemon fisher"
       title="Todos los Pokémon en un solo lugar"
       description="Accede a una amplia lista de Pokémon de todas las generaciones creadas por Nintendo"
@@ -14,7 +14,7 @@
     <OnboardingStep
       v-else
       v-model="currentStep"
-      image="/src/assets/onboard/woman-trainer.png"
+      image="/src/assets/onboard/woman-trainer.svg"
       alt="woman pokemon trainer"
       title="Mantén tu Pokédex actualizada"
       description="Regístrate y guarda tu perfil, Pokémon favoritos, configuraciones y mucho más en la aplicación"
