@@ -107,3 +107,14 @@ body {
 .animate-blink {
   animation: blink 800ms infinite;
 }
+
+.searchbar input {
+  max-width: 265px;
+  @media all and (min-width: 769px) {
+    max-width: 328px
+  }
+}
+
+.search-btn:hover path{
+  stroke: #FFFFFF;
+}
