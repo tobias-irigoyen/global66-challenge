@@ -250,7 +250,7 @@ const goBack = () => {
 onMounted(async () => {
   loadedPokemonImage.value = false;
 
-  await pokemonStore.fetchPokemonById(Number(route.params.id));
+  await pokemonStore.fetchPokemonById(route.params.idOrName as string);
 });
 
 const primaryType = computed(() => {

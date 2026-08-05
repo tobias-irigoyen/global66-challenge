@@ -10,20 +10,22 @@ export const getPokemonList = async () => {
   return response.json()
 }
 
-export const getPokemon = async (urlOrId: string | number) => {
+export const getPokemon = async (idOrName: string | number) => {
   const endpoint =
-    typeof urlOrId === 'string'
-      ? urlOrId
-      : `${BASE_URL}/pokemon/${urlOrId}`
+    typeof idOrName === "string"
+      ? idOrName.startsWith("http")
+        ? idOrName
+        : `${BASE_URL}/pokemon/${idOrName.toLowerCase()}`
+      : `${BASE_URL}/pokemon/${idOrName}`;
 
-  const response = await fetch(endpoint)
+  const response = await fetch(endpoint);
 
   if (!response.ok) {
-    throw new Error('Error al obtener el Pokémon')
+    throw new Error("Error al obtener el Pokémon");
   }
 
-  return response.json()
-}
+  return response.json();
+};
 
 export const getPokemonSpecies = async (id: number | string) => {
   const response = await fetch(`${BASE_URL}/pokemon-species/${id}`)
