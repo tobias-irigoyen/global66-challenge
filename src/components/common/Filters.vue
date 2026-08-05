@@ -30,11 +30,15 @@
           Tipo
         </h4>
 
-        <ChevronUp />
+        <ChevronUp 
+        @click="showTypes = !showTypes"
+         class="transition-transform duration-300 cursor-pointer"
+         :class="{ 'rotate-180': !showTypes }"
+        />
       </div>
 
       <form @submit.prevent class="min-h-[400px]">
-        <div class="border-b-2 border-t-2 border-gray-300 mb-6 py-2 pb-4 max-h-[250px] overflow-y-auto">
+        <div   v-show="showTypes" class="border-b-2 border-t-2 border-gray-300 mb-6 py-2 pb-4 max-h-[250px] overflow-y-auto">
           <div
             v-for="type in pokemonTypes"
             :key="type"
@@ -63,8 +67,8 @@
           <button
             type="button"
             @click="applyFilters"
-            class="font-semibold bg-[var(--primary-btn)] hover:bg-[var(--checked-btn)] cursor-pointer text-white py-4 rounded-full transition-colors"
-          >
+            :disabled="showTypes === false"
+            class="font-semibold bg-[var(--primary-btn)] hover:bg-[var(--checked-btn)] cursor-pointer text-white py-4 rounded-full transition-colors disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500">
             Aplicar
           </button>
 
@@ -83,11 +87,9 @@
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
-
 import FiltersIcon from "@/components/icons/FiltersIcon.vue";
 import ChevronUp from "@/components/icons/ChevronUp.vue";
 import CloseIcon from "@/components/icons/CloseIcon.vue";
-
 import { pokemonTheme } from "@/constants/pokemonTheme";
 import { translatePokemonType } from "@/constants/pokemonTypes";
 
@@ -97,6 +99,7 @@ const pokemonTypes = Object.keys(
 
 const selectedTypes = defineModel<string[]>();
 const showFilters = ref(false);
+const showTypes = ref(true);
 const draftSelectedTypes = ref<string[]>([]);
 
 watch(
