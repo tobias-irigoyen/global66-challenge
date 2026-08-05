@@ -63,7 +63,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-4 absolute bottom-0 left-0 right-0 mx-auto w-100 p-4">
+        <div class="flex flex-col gap-4 absolute bottom-0 left-0 right-0 mx-auto p-4">
           <button
             type="button"
             @click="applyFilters"

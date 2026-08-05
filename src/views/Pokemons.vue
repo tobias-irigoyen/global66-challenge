@@ -16,14 +16,16 @@
       <Searchbar @search="filterPokemons" @clear="clearSearch" />
 
       <Filters v-model="selectedTypes" class="pokemon-filters" />
-
+      <p v-if="selectedTypes.length" class="text-[var(--disabled-color)] w-full">
+        Se han encontrado <span class="font-semibold  mr-2">{{filteredPokemons.length}} resultados</span> 
       <button
         v-if="selectedTypes.length"
         @click="clearFilters"
-        class="border border-gray-300 rounded-full px-4 py-2 text-sm transition-colors cursor-pointer hover:bg-[var(--primary-btn)] hover:text-white mb-4"
+        class="text-[14px] cursor-pointer underline text-[var(--primary-btn)]"
       >
-        Limpiar filtros
+        Borrar filtro
       </button>
+      </p>
     </div>
 
     <section
