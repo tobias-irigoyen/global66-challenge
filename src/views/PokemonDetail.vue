@@ -232,7 +232,6 @@ import CategoryIcon from "@/components/icons/CategoryIcon.vue";
 import HabilityIcon from "@/components/icons/HabilityIcon.vue";
 import Loading from "@/components/common/Loading.vue";
 import ChevronLeft from "@/components/icons/ChevronLeft.vue";
-import ChevronLeftLight from "@/components/icons/ChevronLeftLight.vue";
 import DetailFavIcon from "@/components/icons/DetailFavIcon.vue";
 import MaleIcon from "@/components/icons/MaleIcon.vue";
 import FemaleIcon from "@/components/icons/FemaleIcon.vue";

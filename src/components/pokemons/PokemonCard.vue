@@ -3,7 +3,7 @@
   <RouterLink
     :to="{
       name: 'pokemon-detail',
-      params: { id: pokemon.id }
+      params: { idOrName: pokemon.name }
     }"
     class="flex justify-between items-center w-full max-w-[328px]"
   >
