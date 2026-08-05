@@ -127,7 +127,7 @@ export const pokemonTheme = {
   dark: {
     label: 'Siniestro',
     card: 'bg-[var(--light-black)]',
-    badge: 'bg-[var(--dark-type)]',
+    badge: 'bg-[var(--dark-black)]',
     icon: darkIcon
   },
 

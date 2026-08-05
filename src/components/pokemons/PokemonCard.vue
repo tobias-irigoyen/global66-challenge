@@ -1,7 +1,14 @@
 
 <template>
+  <RouterLink
+    :to="{
+      name: 'pokemon-detail',
+      params: { id: pokemon.id }
+    }"
+    class="flex justify-between items-center w-full max-w-[328px]"
+  >
   <article
-    class="flex justify-between items-center rounded-lg w-full max-w-[328px]"
+    class="flex justify-between items-center rounded-lg w-full"
     :class="theme.card"
   >
     <div class="pl-4">
@@ -43,6 +50,7 @@
       </div>
     </div>
   </article>
+  </RouterLink> 
 </template>
 
 <script setup lang="ts">

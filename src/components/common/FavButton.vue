@@ -3,6 +3,3 @@
     <img src="/src/assets/pokemons/empty-fav.svg" alt="Favorito" />
   </button>
 </template>
-
-<script setup lang="ts">
-</script>
