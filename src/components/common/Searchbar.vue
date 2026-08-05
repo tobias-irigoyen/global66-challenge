@@ -25,7 +25,7 @@
       v-if="hasSearch"
       type="button"
       @click="clearSearch"
-      class="text-red-500 pb-1 border-b-2 cursor-pointer hover:font-semibold"
+      class="text-red-500 pb-1 border-b-2 cursor-pointer"
     >
       X Limpiar búsqueda
     </button>

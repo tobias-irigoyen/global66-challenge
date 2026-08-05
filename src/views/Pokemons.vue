@@ -43,6 +43,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 import { usePokemonStore } from "@/stores/pokemon";
+import { useFavoritesPokemonsStore } from "@/stores/favorites";
 
 import Loading from "../components/common/Loading.vue";
 import Messagge from "../components/common/Message.vue";
@@ -51,9 +52,10 @@ import Filters from "../components/common/Filters.vue";
 import PokemonCard from "../components/pokemons/PokemonCard.vue";
 
 const pokemonStore = usePokemonStore();
-
+const favoritesStore = useFavoritesPokemonsStore();
 onMounted(() => {
   pokemonStore.fetchPokemons();
+  favoritesStore.loadFavorites();
 });
 
 const search = ref("");

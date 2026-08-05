@@ -67,7 +67,7 @@
           <button
             type="button"
             @click="applyFilters"
-            :disabled="showTypes === false"
+            :disabled="showTypes === false || draftSelectedTypes.length === 0"
             class="font-semibold bg-[var(--primary-btn)] hover:bg-[var(--checked-btn)] cursor-pointer text-white py-4 rounded-full transition-colors disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500">
             Aplicar
           </button>

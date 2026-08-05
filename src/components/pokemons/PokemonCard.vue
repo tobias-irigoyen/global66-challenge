@@ -34,7 +34,10 @@
       </ul>
     </div>
     <div class="relative rounded-lg p-4 bg-no-repeat bg-center bg-[length:90%]" :class="theme.badge">
-      <FavButton class="absolute !right-[5px] top-[5px] z-20" />
+      <FavButton
+        :pokemon="pokemon"
+        class="absolute !right-[5px] top-[5px] z-20"
+      />
       <div class="relative z-10 w-[94px] h-[94px]">
         <div
           v-if="!loadedPokemonImage"
