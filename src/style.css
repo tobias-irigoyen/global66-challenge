@@ -116,6 +116,33 @@ body {
   }
 }
 
-.search-btn:hover path{
+.search-btn:hover path,
+.filters-icon:hover path{
   stroke: #FFFFFF;
 }
+
+
+@media all and (max-width: 850px) {
+  .pokemon-filters {
+    margin-left: auto;
+  }
+  .filters-panel {
+    left: unset;
+    right: 0;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .filters-panel {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: auto;
+    right: 0!important;
+    left: 0!important;
+    bottom: 0!important;
+    width: 100vw;
+    height: max-content;
+  }
+}
+
