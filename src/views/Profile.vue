@@ -1,5 +1,6 @@
 <template>
   <section>
+    <h1 class="sr-only">Perfil</h1>
       <Feedback
         :image="'/src/assets/commons/jigglypuff.png'"
         :title="'¡Muy pronto disponible!'"

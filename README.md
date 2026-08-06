@@ -118,7 +118,10 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 - Implementé la posibilidad de ejecutar la búsqueda de Pokémon al presionar la tecla **Enter**.
 
 ### Nueva vista de búsqueda sin resultados
-- Implementé una nueva vista cuando la búsqueda o el filtrado no devuelven resultados. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación. Para probarlo con los filtros, seleccionar el tipo de Pokemon "Siniestro".
+- Implementé una nueva vista que se ve cuando la búsqueda o el filtrado no devuelven resultados. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación. Para probarlo con los filtros, seleccionar el tipo de Pokemon "Siniestro".
+
+### Nueva vista de página no encontrada (Error 404)
+- Implementé una nueva vista que se ve cuando la URL ingresada por el usuario es inexistente. La misma posee una imagen alusiva al error (404) con el estilo de Pokemon, un título, descripción y botón call to action que redirige a la sección de Pokedex.
 
 ### Skeletons
 - Implementé skeletons para todas las imágenes de la aplicación (Onboarding, Tarjeta Pokemon y Detalle de Pokémon).
