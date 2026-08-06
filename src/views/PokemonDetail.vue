@@ -22,7 +22,7 @@
       <span class="sr-only">Volver</span>
     </RouterLink>
   <button class="fixed top-4 right-4 z-50 cursor-pointer">
-    <DetailFavIcon />
+    <FavButton :pokemon="pokemonStore.pokemon" />
   </button>
 </nav>
     <article class="max-w-md w-full">
@@ -168,13 +168,13 @@ import { translatePokemonType } from "@/constants/pokemonTypes";
 import PokemonData from "@/components/pokemons/PokemonData.vue";
 import PokemonTypeBadge from "@/components/pokemons/PokemonTypeBadge.vue";
 import Feedback from '@/components/common/Feedback.vue';
+import FavButton from '@/components/common/FavButton.vue';
 import WeightIcon from "@/components/icons/WeightIcon.vue";
 import HeightIcon from "@/components/icons/HeightIcon.vue";
 import CategoryIcon from "@/components/icons/CategoryIcon.vue";
 import HabilityIcon from "@/components/icons/HabilityIcon.vue";
 import Loading from "@/components/common/Loading.vue";
 import ChevronLeft from "@/components/icons/ChevronLeft.vue";
-import DetailFavIcon from "@/components/icons/DetailFavIcon.vue";
 import MaleIcon from "@/components/icons/MaleIcon.vue";
 import FemaleIcon from "@/components/icons/FemaleIcon.vue";
 
