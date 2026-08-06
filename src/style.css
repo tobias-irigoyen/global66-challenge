@@ -27,22 +27,22 @@
   --grass-type: #8bc34a;
 
 
-  --light-orange: rgba(255, 152, 0, 0.5);
-  --light-green: rgba(139, 195, 74, 0.5);
-  --light-red: rgba(244, 67, 54, 0.5);
-  --light-blue: rgba(33, 150, 243, 0.5);
-  --light-purple: rgba(156, 39, 176, 0.5);
-  --light-cyan: rgba(0, 188, 212, 0.5);
-  --light-pink: rgba(233, 30, 99, 0.5);
-  --light-yellow: rgba(255, 235, 59, 0.5);
-  --light-brown: rgba(121, 85, 72, 0.5);
-  --light-gray: rgba(158, 158, 158, 0.5);
-  --light-black: rgba(0, 0, 0, 0.5);
-  --light-white: rgba(255, 255, 255, 0.5);
+  --light-orange: rgb(255, 152, 0);
+  --light-green: rgb(139, 195, 74);
+  --light-red: rgb(244, 67, 54);
+  --light-blue: rgb(33, 150, 243);
+  --light-purple: rgb(156, 39, 176);
+  --light-cyan: rgb(0, 188, 212);
+  --light-pink: rgb(233, 30, 99);
+  --light-yellow: rgb(255, 235, 59);
+  --light-brown: rgb(121, 85, 72);
+  --light-gray: rgb(158, 158, 158);
+  --light-black: rgb(0, 0, 0);
+  --light-white: rgb(255, 255, 255);
   --light-sky: rgb(161, 206, 243);
   --light-lime: #b3f06c;
   --light-indigo: #8fa8f4;
-  --light-steel: rgba(158, 158, 158, 0.897);
+  --light-steel: rgb(158, 158, 158);
   --light-rose: rgb(247, 137, 173);
   --dark-rose: rgb(190, 101, 131);
   --dark-yellow: rgb(182, 166, 26);
