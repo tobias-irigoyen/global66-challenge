@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full max-w-[328px] overflow-hidden rounded-lg">
     <button
-      v-if="route.name === 'favorites'"
+      v-if="route.name === 'favoritos'"
       type="button"
       @click.stop.prevent="handleFavorite"
       class="absolute right-0 top-0 h-full w-[110px] bg-[var(--warning-color)] flex justify-center items-center"
@@ -107,7 +107,7 @@ const theme = computed(
 );
 
 const startSwipe = (event: TouchEvent) => {
-  if (route.name === "favorites") {
+  if (route.name === "favoritos") {
     startX = event.changedTouches[0].clientX;
   }
 };
@@ -116,7 +116,7 @@ const endSwipe = (event: TouchEvent) => {
   const endX = event.changedTouches[0].clientX;
   const difference = startX - endX;
 
-  if (route.name === "favorites") {
+  if (route.name === "favoritos") {
     if (difference > 50) {
       isSwiped.value = true;
     }

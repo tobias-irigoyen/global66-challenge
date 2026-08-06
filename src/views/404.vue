@@ -12,7 +12,7 @@
     </p>
 
     <RouterLink
-      to="/pokemons"
+      to="/pokedex"
       class="font-semibold bg-[var(--primary-btn)] hover:bg-[var(--checked-btn)] cursor-pointer w-full text-white py-4 rounded-full max-w-[620px] transition-colors"
     >
       Volver al inicio

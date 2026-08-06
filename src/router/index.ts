@@ -12,31 +12,31 @@ const router = createRouter({
       },
     },
     {
-      path: "/favorites",
-      name: "favorites",
+      path: "/favoritos",
+      name: "favoritos",
       component: () => import("@/views/Favorites.vue"),
       meta: {
         showMenu: true,
       },
     },
     {
-      path: "/regions",
-      name: "regions",
+      path: "/regiones",
+      name: "regiones",
       component: () => import("@/views/Regions.vue"),
       meta: {
         showMenu: true,
       },
     },
     {
-      path: "/pokemons",
-      name: "pokemons",
-      component: () => import("@/views/Pokemons.vue"),
+      path: "/pokedex",
+      name: "pokedex",
+      component: () => import("@/views/Pokedex.vue"),
       meta: {
         showMenu: true,
       },
     },
     {
-      path: "/pokemons/:idOrName",
+      path: "/pokedex/:idOrName",
       name: "pokemon-detail",
       component: () => import("@/views/PokemonDetail.vue"),
       props: true,
@@ -45,8 +45,8 @@ const router = createRouter({
       },
     },
     {
-      path: "/profile",
-      name: "profile",
+      path: "/perfil",
+      name: "perfil",
       component: () => import("@/views/Profile.vue"),
       meta: {
         showMenu: true,

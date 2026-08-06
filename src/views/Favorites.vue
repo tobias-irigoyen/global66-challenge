@@ -3,7 +3,7 @@
   :class="favoritesStore.favorites.length === 0 ? '' : 'pt-[50px]'"
   >
   <header class="bg-white flex justify-between items-center fixed top-0 left-0 right-0 mx-auto h-[75px] px-4">
-    <RouterLink to="/pokemons">
+    <RouterLink to="/pokedex">
       <ChevronLeftLight />
       <span class="sr-only">Volver</span>
     </RouterLink>

@@ -8,7 +8,7 @@
     :description="pokemonStore.error"
     :hasButton="true"
     :buttonText="'Volver atrás'"
-    @action="() => router.push('/pokemons')"
+    @action="() => router.push('/pokedex')"
   />
 
   <section
@@ -21,7 +21,7 @@
     >
       <ul class="flex justify-between items-center px-4 m-0 h-full">
         <li>
-          <RouterLink to="/pokemons">
+          <RouterLink to="/pokedex">
             <ChevronLeft />
             <span class="sr-only">Volver</span>
           </RouterLink>

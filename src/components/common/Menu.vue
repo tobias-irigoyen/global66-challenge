@@ -8,19 +8,19 @@
                 </RouterLink>
             </li>
             <li>
-                <RouterLink to="/regions" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer">
+                <RouterLink to="/regiones" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer">
                     <RegionsIcon />
                     Regiones
                 </RouterLink>
             </li>
             <li>
-                <RouterLink to="/favorites" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer">
+                <RouterLink to="/favoritos" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer">
                     <FavoritesIcon />
                     Favoritos
                 </RouterLink>
             </li>
             <li>
-                <RouterLink to="/profile" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer"
+                <RouterLink to="/perfil" class="menu-link min-w-[74px] md:min-w-[76px] flex flex-col justify-center items-center gap-2 cursor-pointer"
                 >
                     <ProfileIcon />
                     Perfil

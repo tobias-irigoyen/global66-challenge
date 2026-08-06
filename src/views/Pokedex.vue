@@ -11,7 +11,8 @@
     @action="pokemonStore.fetchPokemons"
   />
 
-  <div class="relative" v-else>
+  <section class="relative" v-else>
+    <h1 class="sr-only">Pokedex</h1>
     <div class="flex justify-start items-center gap-2 flex-wrap">
       <Searchbar
         v-model="inputSearch"
@@ -39,7 +40,7 @@
       </p>
     </div>
 
-    <section
+    <div
       class="flex justify-center flex-wrap gap-3 mt-4 md:justify-start md:items-start"
     >
       <PokemonCard
@@ -56,8 +57,8 @@
         :buttonText="'Nueva búsqueda'"
         @action="clearSearchAndFilters()"
       />
-    </section>
   </div>
+</section>
 </template>
 
 <script setup lang="ts">

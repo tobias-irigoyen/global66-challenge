@@ -32,6 +32,6 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const currentStep = ref(1)
 const goToPokedex = () => {
-  router.push('/pokemons')
+  router.push('/pokedex')
 }
 </script>
