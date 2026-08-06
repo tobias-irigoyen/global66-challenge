@@ -55,9 +55,9 @@ const toggleFavorite = () => {
   const added = favoritesStore.toggleFavorite(props.pokemon);
 
   if (added) {
-    toast.success(`${capitalize(props.pokemon.name)} agregado a favoritos.`);
+    toast.success(`${capitalize(props.pokemon.name)} ha sido agregado a favoritos.`);
   } else {
-    toast.info(`${capitalize(props.pokemon.name)} eliminado de favoritos.`);
+    toast.info(`${capitalize(props.pokemon.name)} ha sido eliminado de favoritos.`);
   }
 };
 
