@@ -5,6 +5,7 @@
   <header class="bg-white flex justify-between items-center fixed top-0 left-0 right-0 mx-auto h-[75px] px-4">
     <RouterLink to="/pokemons">
       <ChevronLeftLight />
+      <span class="sr-only">Volver</span>
     </RouterLink>
     <h1 class="mr-auto ml-auto font-semibold text-[1rem]"
     style="font-family: var(--montserrat)">

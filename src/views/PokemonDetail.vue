@@ -17,10 +17,10 @@
   class="flex justify-center px-0 pb-6 !mt-[-60px] !pt-[330px] relative md:items-center md:min-h-screen md:!pt-0"
 >
 <nav class="h-[60px] w-full fixed top-0 left-0 right-0 z-50" :class="theme.badge">
-    <button @click="goBack" class="cursor-pointer">
+  <RouterLink to="/pokemons">
       <ChevronLeft class="fixed top-4 left-4 z-50" />
       <span class="sr-only">Volver</span>
-    </button>
+    </RouterLink>
   <button class="fixed top-4 right-4 z-50 cursor-pointer">
     <DetailFavIcon />
   </button>
@@ -101,69 +101,10 @@
         </div>
 
         <div class="mt-8 space-y-4 grid grid-cols-2 gap-4">
-          <div class="flex flex-col items-start justify-start gap-2">
-            <div class="flex justify-start items-center gap-2">
-              <WeightIcon />
-              <h3
-                class="font-medium uppercase text-[var(--secondary-text)] text-[.75rem] tracking-[5%]"
-              >
-                Peso
-              </h3>
-            </div>
-            <span
-              class="font-medium text-[1.125rem] text-[var(--primary-text)] uppercase border-1 border-gray-300 px-6 py-2 rounded-lg w-full text-center"
-              >{{ pokemonStore.pokemon.weight }} kg</span
-            >
-          </div>
-
-          <div class="flex flex-col items-start justify-start gap-2">
-            <div class="flex justify-start items-center gap-2">
-              <HeightIcon />
-              <h3
-                class="font-medium uppercase text-[var(--secondary-text)] text-[.75rem] tracking-[5%]"
-              >
-                Altura
-              </h3>
-            </div>
-            <span
-              class="font-medium text-[1.125rem] text-[var(--primary-text)] uppercase border-1 border-gray-300 px-6 py-2 rounded-lg w-full text-center"
-              >{{ pokemonStore.pokemon.height }} m</span
-            >
-          </div>
-
-          <div class="flex flex-col items-start justify-start gap-2">
-            <div class="flex justify-start items-center gap-2">
-              <CategoryIcon />
-              <h3
-                class="font-medium uppercase text-[var(--secondary-text)] text-[.75rem] tracking-[5%]"
-              >
-                Categoría
-              </h3>
-            </div>
-            <span
-              class="font-medium text-[1.125rem] text-[var(--primary-text)] uppercase border-1 border-gray-300 px-6 py-2 rounded-lg w-full text-center"
-              >{{ pokemonStore.pokemon.category.replace("Pokémon", "") }}</span
-            >
-          </div>
-
-          <div class="flex flex-col items-start justify-start gap-2">
-            <div class="flex justify-start items-center gap-2">
-              <HabilityIcon />
-              <h3
-                class="font-medium uppercase text-[var(--secondary-text)] text-[.75rem] tracking-[5%]"
-              >
-                Habilidad
-              </h3>
-            </div>
-
-            <ul class="w-full">
-              <li
-                class="font-medium text-[1.125rem] text-[var(--primary-text)] uppercase border-1 border-gray-300 px-6 py-2 rounded-lg text-center"
-              >
-                {{ pokemonStore.pokemon.abilities[0] }}
-              </li>
-            </ul>
-          </div>
+          <PokemonData :icon="WeightIcon" :label="'Peso'" :value="pokemonStore.pokemon.weight" :unit="'kg'" />
+          <PokemonData :icon="HeightIcon" :label="'Altura'" :value="pokemonStore.pokemon.height" :unit="'m'" />
+          <PokemonData :icon="CategoryIcon" :label="'Categoría'" :value="pokemonStore.pokemon.category.replace('Pokémon', '')" :unit="''" />
+          <PokemonData :icon="HabilityIcon" :label="'Habilidad'" :value="pokemonStore.pokemon.abilities[0]" :unit="''" />
         </div>
         <div class="mt-4">
           <h3
@@ -204,17 +145,12 @@
           </h3>
 
           <ul class="flex gap-4 flex-wrap mt-2">
-            <li
-              v-for="weakness in pokemonStore.pokemon.weaknesses"
-              :key="weakness"
-              class="flex items-center gap-2 px-3 py-1 rounded-full text-xs text-white font-medium"
-              :class="pokemonTheme[weakness as keyof typeof pokemonTheme].badge"            >
-              <img
-              :src="pokemonTheme[weakness as keyof typeof pokemonTheme].icon"                :alt="weakness"
-                class="w-5 h-5"
+            <li v-for="weakness in pokemonStore.pokemon.weaknesses" :key="weakness">
+              <PokemonTypeBadge 
+              :badgeStyle="pokemonTheme[weakness as keyof typeof pokemonTheme].badge"
+              :icon="pokemonTheme[weakness as keyof typeof pokemonTheme].icon"
+              :name="translatePokemonType(weakness)"
               />
-
-              <span>{{ translatePokemonType(weakness) }}</span>
             </li>
           </ul>
         </div>
@@ -229,6 +165,8 @@ import { useRoute } from "vue-router";
 import { usePokemonStore } from "@/stores/pokemon";
 import { pokemonTheme } from "@/constants/pokemonTheme";
 import { translatePokemonType } from "@/constants/pokemonTypes";
+import PokemonData from "@/components/pokemons/PokemonData.vue";
+import PokemonTypeBadge from "@/components/pokemons/PokemonTypeBadge.vue";
 import Feedback from '@/components/common/Feedback.vue';
 import WeightIcon from "@/components/icons/WeightIcon.vue";
 import HeightIcon from "@/components/icons/HeightIcon.vue";
