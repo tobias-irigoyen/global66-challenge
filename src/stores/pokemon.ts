@@ -143,8 +143,7 @@ const abilities = abilitiesData.map((ability: any) => {
     } catch (err) {
       console.error(err)
 
-      error.value =
-        'No pudimos cargar la información del Pokémon.'
+      error.value = err
 
       pokemon.value = null
     } finally {

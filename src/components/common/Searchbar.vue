@@ -22,7 +22,7 @@
     </button>
 
     <button
-      v-if="hasSearch"
+      v-if="hasSearch && searchedData.length > 0"
       type="button"
       @click="clearSearch"
       class="text-red-500 pb-1 border-b-2 cursor-pointer"
@@ -33,11 +33,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from "vue";
 import SearchIcon from '@/components/icons/SearchLens.vue'
+import type { Pokemon } from '@/types/pokemon'
 
-const search = ref('')
-const hasSearch = ref(false)
+const props = defineProps<{
+  searchedData: Pokemon[];
+}>();
+
+const search = defineModel<string>({ required: true });
+const hasSearch = ref(false);
 
 const emit = defineEmits<{
   search: [value: string]
@@ -59,4 +64,10 @@ const clearSearch = () => {
 
   emit('clear')
 }
+
+watch(search, (value) => {
+  if (!value) {
+    hasSearch.value = false;
+  }
+});
 </script>

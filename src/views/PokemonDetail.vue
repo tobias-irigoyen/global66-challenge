@@ -2,12 +2,15 @@
   
   <Loading v-if="pokemonStore.loading" />
 
-  <section
+  <Feedback
     v-else-if="pokemonStore.error"
-    class="flex justify-center items-center h-screen"
-  >
-    <p>{{ pokemonStore.error }}</p>
-  </section>
+    :image="'/src/assets/commons/magikarp.svg'"
+    :title="'Algo salió mal...'"
+    :description="pokemonStore.error"
+    :hasButton="true"
+    :buttonText="'Reintentar'"
+    @action="() => router.push('/pokemons')"
+  />
 
   <section
   v-else-if="pokemonStore.pokemon"
@@ -226,6 +229,7 @@ import { useRoute } from "vue-router";
 import { usePokemonStore } from "@/stores/pokemon";
 import { pokemonTheme } from "@/constants/pokemonTheme";
 import { translatePokemonType } from "@/constants/pokemonTypes";
+import Feedback from '@/components/common/Feedback.vue';
 import WeightIcon from "@/components/icons/WeightIcon.vue";
 import HeightIcon from "@/components/icons/HeightIcon.vue";
 import CategoryIcon from "@/components/icons/CategoryIcon.vue";

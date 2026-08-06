@@ -82,6 +82,9 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ### Vitest
 - Utilicé Vitest para desarrollar pruebas unitarias.
 
+### Prettier
+- Utilicé Prettier para formatear el código y así estandarizarlo.
+
 ### Figma
 - Utilicé Figma Desktop para obtener la información de la interfaz de usuario y comprender el flujo de navegación.
 
@@ -110,6 +113,9 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 
 ### Ejecutar búsqueda con la tecla Enter
 - Implementé la posibilidad de ejecutar la búsqueda de Pokémon al presionar la tecla **Enter**.
+
+### Nueva vista de búsqueda sin resultados
+- Implementé una nueva vista cuando los resultados de búsqueda o el filtrado es fallido. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación.
 
 ### Skeletons
 - Implementé skeletons para todas las imágenes de la aplicación (Onboarding, Tarjeta Pokemon y Detalle de Pokémon).

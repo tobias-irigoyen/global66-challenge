@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col justify-end items-center h-[calc(100vh-225px)] mx-auto">
+  <article class="flex flex-col justify-center items-center h-[calc(100vh-225px)] mx-auto">
 
   <div class="mb-8 h-[215px] w-[270px]">
     <div

@@ -11,7 +11,7 @@
     Favoritos
   </h1>
   </header>
-      <Messagge
+      <Feedback
         v-if="favoritesStore.favorites.length === 0"
         :image="'/src/assets/commons/magikarp.svg'"
         :title="'No has marcado ningún Pokémon como favorito'"
@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import Messagge from '../components/common/Message.vue';
+import Feedback from '../components/common/Feedback.vue';
 import ChevronLeftLight from '@/components/icons/ChevronLeftLight.vue'; 
 import { onMounted } from "vue";
 import { useFavoritesPokemonsStore } from "@/stores/favorites";

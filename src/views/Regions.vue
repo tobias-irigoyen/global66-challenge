@@ -1,6 +1,6 @@
 <template>
   <section>
-      <Messagge
+      <Feedback
         :image="'/src/assets/commons/jigglypuff.png'"
         :title="'¡Muy pronto disponible!'"
         :description="'Estamos trabajando para traerte esta sección. Vuelve más adelante para descubrir todas las novedades.'"
@@ -10,5 +10,5 @@
 </template>
 
 <script setup lang="ts">
-import Messagge from '../components/common/Message.vue';
+import Feedback from '../components/common/Feedback.vue';
 </script>
