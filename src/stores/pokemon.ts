@@ -2,6 +2,8 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 import * as pokemonApi from '@/services/pokemonApi'
+import { getTypeWeaknesses } from '@/constants/pokemonTypes'
+import { getAbilityName } from '@/constants/abilities'
 import type { Pokemon } from '@/types/pokemon'
 
 export const usePokemonStore = defineStore('pokemon', () => {
@@ -56,23 +58,9 @@ export const usePokemonStore = defineStore('pokemon', () => {
         pokemonApi.getPokemonSpecies(id)
       ])
 
-      const abilitiesData = await Promise.all(
-  pokemonData.abilities.map((ability: any) =>
-    pokemonApi.getAbility(ability.ability.name)
-  )
-)
-
-const abilities = abilitiesData.map((ability: any) => {
-  return (
-    ability.names.find(
-      (name: any) => name.language.name === 'es'
-    )?.name ??
-    ability.names.find(
-      (name: any) => name.language.name === 'en'
-    )?.name ??
-    ability.name
-  )
-})
+      const abilities = pokemonData.abilities.map(
+        (ability: any) => getAbilityName(ability.ability.name)
+      )
 
       const description =
         speciesData.flavor_text_entries.find(
@@ -102,18 +90,10 @@ const abilities = abilitiesData.map((ability: any) => {
         male = 100 - female
       }
 
-      const typeResponses = await Promise.all(
-        pokemonData.types.map((t: any) =>
-          pokemonApi.getType(t.type.name)
-        )
-      )
-
       const weaknesses = [
         ...new Set(
-          typeResponses.flatMap((type: any) =>
-            type.damage_relations.double_damage_from.map(
-              (d: any) => d.name
-            )
+          pokemonData.types.flatMap((t: any) =>
+            getTypeWeaknesses(t.type.name)
           )
         )
       ]
