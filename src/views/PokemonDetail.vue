@@ -7,7 +7,7 @@
     :title="'Algo salió mal...'"
     :description="pokemonStore.error"
     :hasButton="true"
-    :buttonText="'Reintentar'"
+    :buttonText="'Volver atrás'"
     @action="() => router.push('/pokemons')"
   />
 
@@ -215,6 +215,7 @@ import { useRoute } from "vue-router";
 import { usePokemonStore } from "@/stores/pokemon";
 import { pokemonTheme } from "@/constants/pokemonTheme";
 import { translatePokemonType } from "@/constants/pokemonTypes";
+import { toast } from 'vue-sonner'
 import PokemonData from "@/components/pokemons/PokemonData.vue";
 import PokemonTypeBadge from "@/components/pokemons/PokemonTypeBadge.vue";
 import Feedback from "@/components/common/Feedback.vue";
@@ -281,6 +282,7 @@ const copyPokemonInfo = async () => {
 
   try {
     await navigator.clipboard.writeText(pokemonInfo);
+    toast.success('Información del Pokemon copiada al portapapeles')
   } catch (error) {
     console.error("No se pudo copiar al portapapeles", error);
   }

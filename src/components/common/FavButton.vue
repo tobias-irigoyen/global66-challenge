@@ -23,12 +23,16 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from "vue";
+import { computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { toast } from "vue-sonner";
+
 import emptyIcon from "@/assets/pokemons/empty-fav.svg";
 import filledIcon from "@/assets/commons/fav.svg";
+
 import { useFavoritesPokemonsStore } from "@/stores/favorites";
 import type { Pokemon } from "@/types/pokemon";
-import { useRoute } from "vue-router";
+
 import DetailFavIcon from "@/components/icons/DetailFavIcon.vue";
 import DetailFavIconFilled from "@/components/icons/DetailFavIconFilled.vue";
 
@@ -40,12 +44,22 @@ const props = defineProps<{
 
 const favoritesStore = useFavoritesPokemonsStore();
 
-const isFavorite = computed(() => favoritesStore.isFavorite(props.pokemon.id));
+const isFavorite = computed(() =>
+  favoritesStore.isFavorite(props.pokemon.id)
+);
+
+const capitalize = (text: string) =>
+  text.charAt(0).toUpperCase() + text.slice(1);
 
 const toggleFavorite = () => {
-  favoritesStore.toggleFavorite(props.pokemon);
-};
+  const added = favoritesStore.toggleFavorite(props.pokemon);
 
+  if (added) {
+    toast.success(`${capitalize(props.pokemon.name)} agregado a favoritos.`);
+  } else {
+    toast.info(`${capitalize(props.pokemon.name)} eliminado de favoritos.`);
+  }
+};
 
 onMounted(() => {
   favoritesStore.loadFavorites();

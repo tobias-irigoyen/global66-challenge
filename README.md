@@ -1,4 +1,4 @@
-# 🏆 Global66 Challenge Técnico
+# 💻 Global66 Challenge Técnico
 
 ## 📝 Resumen
 
@@ -65,7 +65,7 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ## 🛠️ Dependencias y herramientas
 
 ### Vite
-- Utilicé la librería para montar el proyecto desde cero, configurarlo y preparar la estructura inicial.
+- Utilicé Vite para montar el proyecto desde cero, configurarlo y preparar la estructura inicial.
 
 ### TypeScript
 - Utilicé TypeScript para realizar tipados y hacer la aplicación más robusta y mantenible.
@@ -73,11 +73,14 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ### Pinia
 - Utilicé Pinia para crear stores, manejar el estado global de la aplicación y persistir datos en `localStorage`.
 
+### Vue Router
+- Utilicé Vue Router para gestionar el ruteo de la aplicación y el manejo de sus URLs.
+
 ### Tailwind CSS
 - Utilicé Tailwind CSS para aplicar estilos mediante clases utilitarias.
 
-### Vue Router
-- Utilicé Vue Router para gestionar el ruteo de la aplicación y el manejo de sus URLs.
+### Vue Sonner
+- Utilicé Vue Sonner para implementar Toasts informativos.
 
 ### Vitest
 - Utilicé Vitest para desarrollar pruebas unitarias.
@@ -96,7 +99,7 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 
 ---
 
-## ⭐ Extras
+## 💯 Extras
 
 ### Limpiar resultados de búsqueda
 - Creé un botón para limpiar los resultados de búsqueda y volver a mostrar todos los Pokémon en pantalla.
@@ -115,10 +118,13 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 - Implementé la posibilidad de ejecutar la búsqueda de Pokémon al presionar la tecla **Enter**.
 
 ### Nueva vista de búsqueda sin resultados
-- Implementé una nueva vista cuando los resultados de búsqueda o el filtrado es fallido. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación.
+- Implementé una nueva vista cuando la búsqueda o el filtrado no devuelven resultados. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación. Para probarlo con los filtros, seleccionar el tipo de Pokemon "Siniestro".
 
 ### Skeletons
 - Implementé skeletons para todas las imágenes de la aplicación (Onboarding, Tarjeta Pokemon y Detalle de Pokémon).
+
+### Toasts informativos
+- Implementé toasts informativos para tres acciones: Copiar información del Pokemon al portapapeles, agregar Pokemon a favoritos, eliminar Pokemon de favoritos. El fin de los mismos es brindar feedback de las acciones al usuario.
 
 ### Stepper en el onboarding
 - Maqueté un stepper interactivo que permite navegar hacia adelante y atrás entre las dos pantallas del onboarding.
