@@ -132,6 +132,9 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ### Stepper en el onboarding
 - Maqueté un stepper interactivo que permite navegar hacia adelante y atrás entre las dos pantallas del onboarding.
 
+### Favicons personalizados
+- Implementé un favicon personalizado con la ilustración de una pokebola. El mismo se adapta a distintos navegadores y dispositivos.
+
 ### Tests con Vitest
 - Implementé Vitest y desarrollé dos pruebas unitarias:
   - Un test para un componente.
