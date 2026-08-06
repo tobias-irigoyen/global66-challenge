@@ -3,6 +3,16 @@ import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 
 import PokemonCard from '@/components/pokemons/PokemonCard.vue'
+import { vi } from 'vitest'
+
+vi.mock('vue-router', () => ({
+  useRoute: () => ({
+    name: 'pokemons'
+  }),
+  RouterLink: {
+    template: '<a><slot /></a>'
+  }
+}))
 
 
 describe('PokemonCard.vue', () => {
