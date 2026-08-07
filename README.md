@@ -18,9 +18,9 @@ La aplicación debe ser responsive y capaz de mostrar información detallada sob
 - Se desarrollaron las siguientes secciones: 
     - Dos vistas de Onboarding
     - Pokedex: Lista de Pokemons
-    - Regiones: Seccion dummy que muestra un mensaje de construcción
+    - Regiones: Sección dummy que muestra un mensaje de construcción
     - Favoritos: Lista de Pokemons favoritos
-    - Perfil: Seccion dummy que muestra un mensaje de construcción
+    - Perfil: Sección dummy que muestra un mensaje de construcción
 
 ## ⚙️ Pasos de instalación del proyecto
 
@@ -62,6 +62,20 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 
 <code>npm run preview</code>
 
+---
+
+## ✅ Testing
+
+- Para ejecutar los tests con una interfaz gráfica, ejecutá el siguiente comando:
+
+<code>npm run test:ui</code>
+
+- Para ejecutar los tests en modo headless, ejecutá el siguiente comando:
+
+<code>npm run test</code>
+
+---
+
 ## 🛠️ Dependencias y herramientas
 
 ### Vite
@@ -97,6 +111,43 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ### Adobe Photoshop
 - Utilicé Adobe Photoshop para recortar y adaptar ciertas imágenes a la interfaz proporcionada.
 
+------
+
+## ℹ️ Información sobre la app
+
+La app está compuesta por las siguientes secciones y funcionalidades:
+
+### Onboarding
+En esta sección se pueden visualizar dos vistas de onboarding navegables entre sí. Contiene una imagen, texto, y un call to action para navegar hacia la siguiente vista. El destino final de la sección es la sección Pokedex.
+
+### Pokedex
+
+En esta sección se visualizan 150 Pokemons con su número, nombre, sprite (imagen), tipos y botón para agregar/quitar de favoritos. A todos los Pokemons se les puede hacer click para entrar a la vista de detalle del mismo.
+Cuenta con las siguientes funcionalidades: 
+- **Filtrado**: Presionando el botón adyacente al de búsqueda se abrirá un panel con todos los tipos de Pokemons y checkboxes clickeables para seleccionar el tipo por el cual se quieren filtrar los 150 Pokemons. Se puede seleccionar más de un tipo.
+En caso de que no haya coincidencias, aparecerá una vista de "Sin resultados" que permitirá resetear los filtros y hacer una nueva búsqueda.
+
+- **Búsqueda**: En la parte superior de la pantalla hay un campo de búsqueda en el que se puede ingresar el nombre del Pokemon deseado y luego hay dos opciones de ejecutar la búsqueda:
+1. Presionar la tecla enter del teclado.
+2. Presionar el botón con la lupa que se encuentra a la derecha del campo de búsqueda.
+
+En el mismo caso del filtrado,en caso de no haber coincidencias, aparecerá la vista de "Sin resultados".
+
+### Regiones y Perfil
+
+Estas secciones son páginas en construcción meramente informativas.
+
+### Favoritos
+
+En esta sección aparecerán los Pokemon que se hayan marcado como favoritos. Se los puede quitar de favoritos, presionando el botón del corazón o, en dispositivos móviles, haciendo swipe hacia la izquierda y presionando el icono del tacho.
+
+### Detalle de Pokemon
+
+En esta sección se verá la información detallada de cada Pokemon: número, nombre, sprite (imagen), tipos, altura, peso, categoría, habilidad, género y debilidades.
+A su vez tiene dos funcionalidades:
+- Agregar/quitar de favoritos: Al igual que en la tarjeta de Pokemon de la Pokedex y Favoritos, se puede hacer la misma acción presionando el botón del corazón en la esquina superior derecha de la vista.
+- Copiar información del Pokemon: Al lado del botón de agregar/quitar de favoritos, hay un botón de compartir, el cual copia toda la informacion del Pokemon separada por comas al portapapeles para disponibilizarla.
+
 ---
 
 ## 💯 Extras
@@ -121,7 +172,7 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 - Implementé una nueva vista que se ve cuando la búsqueda o el filtrado no devuelven resultados. Para esto busqué una imagen del Pokemon Psyduck y la edité para que quede acorde a la interfaz general de la aplicación. Para probarlo con los filtros, seleccionar el tipo de Pokemon "Siniestro".
 
 ### Nueva vista de página no encontrada (Error 404)
-- Implementé una nueva vista que se ve cuando la URL ingresada por el usuario es inexistente. La misma posee una imagen alusiva al error (404) con el estilo de Pokemon, un título, descripción y botón call to action que redirige a la sección de Pokedex.
+- Implementé una nueva vista que se ve cuando la URL ingresada por el usuario es inexistente. Esta posee una imagen alusiva al error (404) con el estilo de Pokemon, un título, descripción y botón call to action que redirige a la sección de Pokedex.
 
 ### Skeletons
 - Implementé skeletons para todas las imágenes de la aplicación (Onboarding, Tarjeta Pokemon y Detalle de Pokémon).
@@ -140,14 +191,3 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
   - Un test para un componente.
   - Un test para un store.
 
----
-
-## ✅ Testing
-
-- Para ejecutar los tests con una interfaz gráfica, ejecutá el siguiente comando:
-
-<code>npm run test:ui</code>
-
-- Para ejecutar los tests en modo headless, ejecutá el siguiente comando:
-
-<code>npm run test</code>
