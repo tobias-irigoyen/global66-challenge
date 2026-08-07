@@ -96,6 +96,10 @@ Previsualizá localmente la versión de producción del proyecto ejecutando el s
 ### Vue Sonner
 - Utilicé Vue Sonner para implementar Toasts informativos.
 
+### Wave Evaluation Tool (Extension de navegador)
+
+- Utilicé Wave Evaluation Tool para detectar errores de usabilidad en el maquetado.
+
 ### Vitest
 - Utilicé Vitest para desarrollar pruebas unitarias.
 
@@ -191,3 +195,6 @@ A su vez tiene dos funcionalidades:
   - Un test para un componente.
   - Un test para un store.
 
+### Tests de usabilidad
+
+- Hice pruebas de usabilidad con la extensión de navegador Wave Evaluation Tool para detectar errores de maquetación que afecten la usabilidad.
