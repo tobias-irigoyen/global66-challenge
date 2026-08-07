@@ -5,8 +5,10 @@
   >
     <div class="relative">
       <SearchIcon class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
-
+      <label class="sr-only" for="searchbar-input">Buscar:</label>
       <input
+        id="searchbar-input"
+        name="searchbar-input"
         v-model="search"
         class="rounded-full border-2 border-gray-200 px-4 py-2 pl-11"
         type="text"
@@ -18,6 +20,7 @@
       type="submit"
       class="search-btn flex justify-center items-center border-2 border-gray-200 h-[45px] w-[45px] rounded-full cursor-pointer transition-colors hover:bg-[var(--primary-btn)]"
     >
+      <span class="sr-only">Buscar</span>
       <SearchIcon />
     </button>
 

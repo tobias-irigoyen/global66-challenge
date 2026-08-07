@@ -5,6 +5,7 @@
     @click.stop.prevent="toggleFavorite"
     class="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
   >
+    <span class="sr-only">{{ isFavorite ? 'Quitar favorito' : 'Agregar favorito' }}</span>
     <img
       :src="isFavorite ? filledIcon : emptyIcon"
       :alt="isFavorite ? 'Quitar favorito' : 'Agregar favorito'"
@@ -17,6 +18,7 @@
     @click.stop.prevent="toggleFavorite"
     class="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
   >
+    <span class="sr-only">{{ isFavorite ? 'Quitar favorito' : 'Agregar favorito' }}</span>
     <DetailFavIconFilled v-if="isFavorite" />
     <DetailFavIcon v-else />
   </button>
