@@ -22,10 +22,10 @@
       @touchend="endSwipe"
     >
       <article
-        class="flex justify-between items-center rounded-lg w-full cursor-pointer h-[102px]"
+        class="pokemon-card flex justify-between items-center rounded-lg w-full cursor-pointer h-[102px]"
         :class="theme.card"
       >
-        <div class="pl-4">
+        <div class="pokemon-card-info pl-4">
           <span
             class="uppercase font-semibold text-xs text-[var(--secondary-text)]"
           >
@@ -50,7 +50,7 @@
         </div>
 
         <div
-          class="relative rounded-lg bg-no-repeat bg-center bg-[length:90%] h-[102px] w-[126px]"
+          class="pokemon-image-main-container relative rounded-lg bg-no-repeat bg-center bg-[length:90%] h-[102px] w-[126px]"
           :class="theme.badge"
         >
           <FavButton
@@ -59,7 +59,7 @@
           />
 
           <div
-            class="relative z-10 w-[126px] h-[102px] flex items-center justify-center"
+            class="pokemon-image-container relative z-10 w-[126px] h-[102px] flex items-center justify-center"
           >
             <div
               v-if="!loadedPokemonImage"
@@ -132,3 +132,21 @@ const handleFavorite = () => {
   isSwiped.value = false;
 };
 </script>
+
+<style>
+@media all and (max-width: 355px) {
+  .pokemon-card {
+    height: unset!important;
+  } 
+  .pokemon-card .pokemon-image-main-container {
+    height: unset!important;
+  }
+  .pokemon-card .pokemon-image-container {
+    height:142px!important;
+  } 
+  .pokemon-card-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+</style>
