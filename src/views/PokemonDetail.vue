@@ -13,7 +13,7 @@
 
   <section
     v-else-if="pokemonStore.pokemon"
-    class="flex justify-center px-0 pb-6 !mt-[-60px] !pt-[330px] relative md:items-center md:min-h-screen md:!pt-0"
+    class="flex justify-center px-0 pb-6 !mt-[-60px] !pt-[330px] relative md:items-center md:min-h-screen md:!pt-0 md:!mt-[50px]"
   >
     <nav
       class="h-[60px] w-full fixed top-0 left-0 right-0 z-50"
