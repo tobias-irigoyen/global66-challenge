@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="handleSearch"
-    class="searchbar flex items-center flex-wrap gap-4 !mb-4"
+    class="searchbar flex items-center gap-4 !mb-4"
   >
     <div class="relative">
       <SearchIcon class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
@@ -74,3 +74,22 @@ watch(search, (value) => {
   }
 });
 </script>
+
+
+
+<style>
+@media all and (max-width: 360px) {
+  .search-button {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media all and (max-width: 350px) {
+  .searchbar {
+    flex-wrap: wrap;
+  }
+  .pokemon-filters {
+    margin-left: unset;
+  }
+}
+</style>
